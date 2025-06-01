@@ -43,7 +43,7 @@ class PostController extends Controller
 
     public function edit(Post $post)
     {
-        $this->authorize('update', $post); // Optional: if using policies
+        $this->authorize('update', $post);
         return view('sections.posts.edit', compact('post'));
     }
 
@@ -63,7 +63,7 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
-        $this->authorize('delete', $post); // Optional
+        $this->authorize('delete', $post);
         $post->delete();
 
         return redirect()->route('posts')->with('success', 'Post deleted successfully.');

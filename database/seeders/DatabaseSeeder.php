@@ -59,5 +59,6 @@ class DatabaseSeeder extends Seeder
             'user_id' => $user2->id,
         ]);
     }
+    
     }
-}
+
